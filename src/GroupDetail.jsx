@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'; // Importe o axios normalmente
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate ,Link} from 'react-router-dom';
 
 function GroupDetail() {
   const [group, setGroup] = useState(null);

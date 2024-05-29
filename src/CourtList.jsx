@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link , useNavigate} from 'react-router-dom';
+
+
 
 function CourtList() {
+  const navigate = useNavigate();
   const [courts, setCourts] = useState([]);
 
   useEffect(() => {
@@ -37,6 +40,9 @@ function CourtList() {
           </li>
         ))}
       </ul>
+      <div className={'inputContainer'}>
+        <button className={'inputButton'} onClick={() => navigate('/home')}>go to home</button>
+      </div>
     </div>
   );
 }

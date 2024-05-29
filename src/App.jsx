@@ -13,14 +13,16 @@ import SportList from './SportList';
 import SportForm from './SportForm';
 import SportDetail from './SportDetail';
 import HomePage from './HomePage';  
+import RedirectToLogin from './RedirectToLogin';
 
 function App() {
   return (
     <Router>
       <Routes>
+        <Route path="/" element={<RedirectToLogin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/" element={<HomePage />} />  
+        <Route path="/home" element={<HomePage />} />  
         <Route path="/court" element={<CourtList />} />
         <Route path="/court/new" element={<CourtForm />} />
         <Route path="/court/:id/edit" element={<CourtForm />} />

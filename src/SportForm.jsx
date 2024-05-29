@@ -37,10 +37,15 @@ function SportForm() {
     };
 
     if (id) {
+      console.log('id', id);
       axios.put(`http://localhost:8080/sport/${id}`, sport, config)
         .then(() => navigate('/sport'))
         .catch(error => console.error('There was an error!', error));
     } else {
+      //mostar erro
+      console.log('entrou  o sem id');
+      console.log(sport);
+      console.log(config)
       axios.post('http://localhost:8080/sport', sport, config)
         .then(() => navigate('/sport'))
         .catch(error => console.error('There was an error!', error));

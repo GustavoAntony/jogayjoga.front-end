@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function GroupList() {
+  const navigate = useNavigate();
   const [groups, setGroups] = useState([]);
 
   useEffect(() => {
@@ -37,6 +38,9 @@ function GroupList() {
           </li>
         ))}
       </ul>
+      <div className={'inputContainer'}>
+        <button className={'inputButton'} onClick={() => navigate('/home')}>go to home</button>
+      </div>
     </div>
   );
 }

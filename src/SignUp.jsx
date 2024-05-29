@@ -53,7 +53,7 @@ const SignUp = (props) => {
         password: password,
       };
 
-      axios.post('http://localhost:8080/accounts', accountData)
+      axios.post('http://localhost:8080/auth/register', accountData)
         .then(response => {
           console.log('Account created successfully:', response.data);
           navigate('/login');

@@ -38,8 +38,8 @@ const Login = (props) => {
         .then(response => {
           const token = response.data.token;
           console.log('Login successful, token:', token);
-          localStorage.setItem('authToken', token); // Armazena o token no local storage
-          navigate('/'); // Redireciona para a home page após o login
+          localStorage.setItem('token', token); // Armazena o token no local storage
+          navigate('/home'); // Redireciona para a home page após o login
         })
         .catch(error => {
           console.error('There was an error logging in!', error);
